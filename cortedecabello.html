@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cortes de Cabello</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#fff5f7;
+    }
+
+    /* BOTÓN VOLVER */
+
+    .volver{
+      text-align:center;
+      margin:40px 0;
+    }
+
+    .volver a{
+      background:#f8c8dc;
+      color:#6d6875;
+      padding:15px 30px;
+      text-decoration:none;
+      border-radius:30px;
+      font-size:18px;
+      font-weight:bold;
+      border:2px solid #d6d6d6;
+      transition:0.3s;
+    }
+
+    .volver a:hover{
+      background:#ffe599;
+    }
+
+    /* SECCIÓN CORTES */
+
+    .cortes{
+      padding:60px 20px;
+      text-align:center;
+      background:#fff5f7;
+    }
+
+    .cortes h2{
+      color:#6d6875;
+      font-size:40px;
+      margin-bottom:15px;
+    }
+
+    .texto-corte{
+      font-size:20px;
+      margin-bottom:40px;
+      color:#555;
+    }
+
+    /* GALERÍA */
+
+    .galeria-cortes{
+      display:flex;
+      justify-content:center;
+      gap:25px;
+      flex-wrap:wrap;
+    }
+
+    /* TARJETAS */
+
+    .corte-box{
+      background:#f4e1e6;
+      border:3px solid #d6d6d6;
+      border-radius:20px;
+      width:280px;
+      padding:20px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* IMAGEN */
+
+    .img-corte{
+      width:100%;
+      height:220px;
+      background:#ffe599;
+      border:3px dashed #6d6875;
+      border-radius:15px;
+      margin-bottom:15px;
+      overflow:hidden;
+    }
+
+    .img-corte img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      border-radius:12px;
+    }
+
+    /* TEXTO */
+
+    .corte-box h3{
+      color:#6d6875;
+      margin-bottom:10px;
+      font-size:24px;
+    }
+
+    .corte-box p{
+      color:#555;
+      font-size:17px;
+      line-height:1.5;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <section class="cortes">
+
+    <h2>Nuestros Cortes de Cabello</h2>
+
+    <p class="texto-corte">
+      Descubre estilos modernos, elegantes y personalizados
+      para resaltar tu belleza.
+    </p>
+
+    <div class="galeria-cortes">
+
+      <!-- TARJETA 1 -->
+
+      <div class="corte-box">
+
+        <div class="img-corte">
+          <img src="ing/corte1.jpg" alt="Corte Moderno">
+        </div>
+
+        <h3>Corte Moderno</h3>
+
+        <p>
+          Diseños actuales para un look fresco y elegante.
+        </p>
+
+      </div>
+
+      <!-- TARJETA 2 -->
+
+      <div class="corte-box">
+
+        <div class="img-corte">
+          <img src="ing/corte2.jpg" alt="Corte Clásico">
+        </div>
+
+        <h3>Corte Clásico</h3>
+
+        <p>
+          Estilos tradicionales con un toque profesional.
+        </p>
+
+      </div>
+
+      <!-- TARJETA 3 -->
+
+      <div class="corte-box">
+
+        <div class="img-corte">
+          <img src="ing/corte3.jpg" alt="Cambio de Look">
+        </div>
+
+        <h3>Cambio de Look</h3>
+
+        <p>
+          Renueva tu imagen con asesoría personalizada.
+        </p>
+
+      </div>
+
+      
+      <!-- TARJETA 5 -->
+
+      <div class="corte-box">
+
+        <div class="img-corte">
+          <img src="ing/recto.jpg" alt="Cabello recto">
+        </div>
+
+        <h3>Cabello corto</h3>
+
+        <p>
+          Cortes delicados para mantener un look sofisticado.
+        </p>
+
+      </div>
+
+      <!-- TARJETA 6 -->
+
+      <div class="corte-box">
+
+        <div class="img-corte">
+          <img src="ing/capas.jpg" alt="corte en capas">
+        </div>
+
+        <h3>Estilo Juvenil</h3>
+
+        <p>
+          Diseños frescos y modernos para un cambio de imagen.
+        </p>
+
+      </div>
+
+      <div class="corte-box">
+
+        <div class="img-corte">
+          <img src="ing/pelo1.jpg" alt="corte en capas">
+        </div>
+
+        <h3>Estilo Angel</h3>
+
+        <p>
+          Diseños para verte libre.
+        </p>
+
+      </div>
+      <div class="corte-box">
+
+        <div class="img-corte">
+          <img src="ing/pelo2.jpg" alt="corte en capas">
+        </div>
+
+        <h3>Estilo Cortina</h3>
+
+        <p>
+          Nuevo corte nueva version de mi.
+        </p>
+
+      </div>
+      <div class="corte-box">
+
+        <div class="img-corte">
+          <img src="ing/pelo3.jpg" alt="corte en capas">
+        </div>
+
+        <h3>Corte Mariposa</h3>
+
+        <p>
+          Diseños para dar volumen.
+        </p>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- BOTÓN REGRESAR -->
+
+  <div class="volver">
+
+    <a href="index.html">⬅ Regresar al Inicio</a>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+
+<section class="reservar">
+
+  <h2>Reserva tu Cita</h2>
+
+  <p class="texto-reserva">
+    Completa el formulario y agenda tu cita con nosotros.
+  </p>
+
+  <form action="https://wa.me/50258990713">
+
+
+    <input type="text" placeholder="Nombre Completo" required>
+
+    <input type="tel" placeholder="Número de Teléfono" required>
+
+    <input type="email" placeholder="Correo Electrónico" required>
+
+    <select required>
+      <option value="">Selecciona un servicio</option>
+      <option>Corte de Cabello</option>
+      <option>Maquillaje</option>
+      <option>Manicura</option>
+    </select>
+
+    <input type="date" required>
+
+    <textarea placeholder="Mensaje adicional"></textarea>
+
+    <button type="submit">Reservar Cita</button>
+
+  </form>
+
+</section>
+
+
+<style>
+
+/* SECCIÓN RESERVAR */
+
+.reservar{
+  background:#fff5f7;
+  padding:60px 20px;
+  text-align:center;
+}
+
+.reservar h2{
+  color:#6d6875;
+  font-size:40px;
+  margin-bottom:15px;
+}
+
+.texto-reserva{
+  color:#555;
+  font-size:20px;
+  margin-bottom:40px;
+}
+
+/* FORMULARIO */
+
+.formulario{
+  max-width:600px;
+  margin:auto;
+  background:#f4e1e6;
+  padding:35px;
+  border-radius:20px;
+  border:3px solid #d6d6d6;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+/* INPUTS */
+
+.formulario input,
+.formulario select,
+.formulario textarea{
+  padding:15px;
+  border-radius:12px;
+  border:2px solid #d6d6d6;
+  font-size:16px;
+  outline:none;
+}
+
+/* TEXTAREA */
+
+.formulario textarea{
+  resize:none;
+  height:120px;
+}
+
+/* BOTÓN */
+
+.formulario button{
+  background:#f8c8dc;
+  color:#6d6875;
+  border:none;
+  padding:15px;
+  border-radius:30px;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.formulario button:hover{
+  background:#ffe599;
+}
+/* BOTÓN VOLVER */
+
+.volver{
+  text-align:center;
+  margin:40px 0;
+}
+
+.volver a{
+  background:#f8c8dc;
+  color:#6d6875;
+  padding:15px 30px;
+  text-decoration:none;
+  border-radius:30px;
+  font-size:18px;
+  font-weight:bold;
+  border:2px solid #d6d6d6;
+  transition:0.3s;
+}
+
+.volver a:hover{
+  background:#ffe599;
+}/* BOTÓN VOLVER */
+
+.volver{
+  text-align:center;
+  margin:40px 0;
+}
+
+.volver a{
+  background:#f8c8dc;
+  color:#6d6875;
+  padding:15px 30px;
+  text-decoration:none;
+  border-radius:30px;
+  font-size:18px;
+  font-weight:bold;
+  border:2px solid #d6d6d6;
+  transition:0.3s;
+}
+
+.volver a:hover{
+  background:#ffe599;
+}
+
+</style>
+  <!-- BOTÓN REGRESAR -->
+    
+<div class="volver">
+
+  <a href="index.html">⬅ Regresar al Inicio</a>
+
+</div>
