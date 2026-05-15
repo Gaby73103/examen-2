@@ -1,4 +1,3 @@
-
 <section class="reservar">
 
   <h2>Reserva tu Cita</h2>
@@ -7,25 +6,36 @@
     Completa el formulario y agenda tu cita con nosotros.
   </p>
 
-  <form action="https://wa.me/50258990713">
+  <p>
+    📧 Correo:
+    <a href="mailto:barreramonroykimberlygabriela@gmail.com">
+      barreramonroykimberlygabriela@gmail.com
+    </a>
+  </p>
 
+  <form 
+    action="mailto:barreramonroykimberlygabriela@gmail.com?subject=Reserva%20de%20Cita"
+    method="post"
+    enctype="text/plain"
+    onsubmit="setTimeout(() => this.reset(), 1000)"
+  >
 
-    <input type="text" placeholder="Nombre Completo" required>
+    <input type="text" name="Nombre" placeholder="Nombre Completo" required>
 
-    <input type="tel" placeholder="Número de Teléfono" required>
+    <input type="tel" name="Telefono" placeholder="Número de Teléfono" required>
 
-    <input type="email" placeholder="Correo Electrónico" required>
+    <input type="email" name="Correo" placeholder="Correo Electrónico" required>
 
-    <select required>
+    <select name="Servicio" required>
       <option value="">Selecciona un servicio</option>
       <option>Corte de Cabello</option>
       <option>Maquillaje</option>
       <option>Manicura</option>
     </select>
 
-    <input type="date" required>
+    <input type="date" name="Fecha" required>
 
-    <textarea placeholder="Mensaje adicional"></textarea>
+    <textarea name="Mensaje" placeholder="Mensaje adicional"></textarea>
 
     <button type="submit">Reservar Cita</button>
 
@@ -36,40 +46,48 @@
 
 <style>
 
+/* FONDO GENERAL */
+
+body{
+  background:linear-gradient(to bottom,#fff5f7,#ffeef5);
+  font-family: 'Poppins', sans-serif;
+}
+
 /* SECCIÓN RESERVAR */
 
 .reservar{
-  background:#fff5f7;
-  padding:60px 20px;
+  padding:80px 20px;
   text-align:center;
 }
 
 .reservar h2{
   color:#6d6875;
-  font-size:40px;
+  font-size:48px;
   margin-bottom:15px;
+  font-weight:bold;
 }
 
 .texto-reserva{
-  color:#555;
+  color:#7a7a7a;
   font-size:20px;
-  margin-bottom:40px;
+  margin-bottom:50px;
 }
 
 /* FORMULARIO */
 
 .formulario{
-  max-width:600px;
+  max-width:650px;
   margin:auto;
-  background:#f4e1e6;
-  padding:35px;
-  border-radius:20px;
-  border:3px solid #d6d6d6;
-  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  background:rgba(255,255,255,0.7);
+  backdrop-filter:blur(10px);
+  padding:40px;
+  border-radius:30px;
+  border:1px solid rgba(255,255,255,0.5);
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
 
   display:flex;
   flex-direction:column;
-  gap:20px;
+  gap:22px;
 }
 
 /* INPUTS */
@@ -77,86 +95,95 @@
 .formulario input,
 .formulario select,
 .formulario textarea{
-  padding:15px;
-  border-radius:12px;
-  border:2px solid #d6d6d6;
+  width:100%;
+  padding:16px;
+  border:none;
+  border-radius:16px;
+  background:#fff;
   font-size:16px;
+  color:#555;
+  box-shadow:0 3px 8px rgba(0,0,0,0.05);
+  transition:0.3s;
   outline:none;
+}
+
+/* EFECTO */
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus{
+  transform:scale(1.02);
+  box-shadow:0 0 10px rgba(248,200,220,0.8);
 }
 
 /* TEXTAREA */
 
 .formulario textarea{
   resize:none;
-  height:120px;
+  height:140px;
 }
 
 /* BOTÓN */
 
 .formulario button{
-  background:#f8c8dc;
+  background:linear-gradient(135deg,#f8c8dc,#ffd6e7);
   color:#6d6875;
   border:none;
-  padding:15px;
-  border-radius:30px;
+  padding:16px;
+  border-radius:40px;
   font-size:18px;
   font-weight:bold;
   cursor:pointer;
   transition:0.3s;
+  box-shadow:0 5px 15px rgba(248,200,220,0.5);
 }
 
 .formulario button:hover{
-  background:#ffe599;
+  transform:translateY(-3px);
+  background:linear-gradient(135deg,#ffe599,#ffd6a5);
 }
+
+/* CORREO */
+
+.reservar p a{
+  color:#d16ba5;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.reservar p a:hover{
+  text-decoration:underline;
+}
+
 /* BOTÓN VOLVER */
 
 .volver{
   text-align:center;
-  margin:40px 0;
+  margin:50px 0;
 }
 
 .volver a{
-  background:#f8c8dc;
+  background:linear-gradient(135deg,#f8c8dc,#ffd6e7);
   color:#6d6875;
-  padding:15px 30px;
+  padding:15px 35px;
   text-decoration:none;
-  border-radius:30px;
+  border-radius:40px;
   font-size:18px;
   font-weight:bold;
-  border:2px solid #d6d6d6;
+  box-shadow:0 5px 15px rgba(248,200,220,0.5);
   transition:0.3s;
 }
 
 .volver a:hover{
-  background:#ffe599;
-}/* BOTÓN VOLVER */
-
-.volver{
-  text-align:center;
-  margin:40px 0;
+  background:linear-gradient(135deg,#ffe599,#ffd6a5);
+  transform:translateY(-3px);
 }
 
-.volver a{
-  background:#f8c8dc;
-  color:#6d6875;
-  padding:15px 30px;
-  text-decoration:none;
-  border-radius:30px;
-  font-size:18px;
-  font-weight:bold;
-  border:2px solid #d6d6d6;
-  transition:0.3s;
-}
-
-.volver a:hover{
-  background:#ffe599;
-}
 
 </style>
-  <!-- BOTÓN REGRESAR -->
-    
+
+<!-- BOTÓN REGRESAR -->
+
 <div class="volver">
-
   <a href="index.html">⬅ Regresar al Inicio</a>
-
 </div>
