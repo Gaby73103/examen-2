@@ -8,40 +8,73 @@
 
   <p>
     📧 Correo:
-    <a href="mailto:barreramonroykimberlygabriela@gmail.com">
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=barreramonroykimberlygabriela@gmail.com&su=Reserva%20de%20Cita" target="_blank">
       barreramonroykimberlygabriela@gmail.com
     </a>
   </p>
 
-  <form 
-    action="mailto:barreramonroykimberlygabriela@gmail.com?subject=Reserva%20de%20Cita"
-    method="post"
-    enctype="text/plain"
-    onsubmit="setTimeout(() => this.reset(), 1000)"
-  >
+  <form onsubmit="enviarCorreo(); return false;">
 
-    <input type="text" name="Nombre" placeholder="Nombre Completo" required>
+    <input type="text" id="nombre" name="Nombre" placeholder="Nombre Completo" required>
 
-    <input type="tel" name="Telefono" placeholder="Número de Teléfono" required>
+    <input type="tel" id="telefono" name="Telefono" placeholder="Número de Teléfono" required>
 
-    <input type="email" name="Correo" placeholder="Correo Electrónico" required>
+    <input type="email" id="correo" name="Correo" placeholder="Correo Electrónico" required>
 
-    <select name="Servicio" required>
+    <select id="servicio" name="Servicio" required>
       <option value="">Selecciona un servicio</option>
       <option>Corte de Cabello</option>
       <option>Maquillaje</option>
       <option>Manicura</option>
     </select>
 
-    <input type="date" name="Fecha" required>
+    <input type="date" id="fecha" name="Fecha" required>
 
-    <textarea name="Mensaje" placeholder="Mensaje adicional"></textarea>
+    <textarea id="mensaje" name="Mensaje" placeholder="Mensaje adicional"></textarea>
 
     <button type="submit">Reservar Cita</button>
 
   </form>
 
 </section>
+
+<script>
+
+function enviarCorreo(){
+
+  let nombre = document.getElementById("nombre").value;
+  let telefono = document.getElementById("telefono").value;
+  let correo = document.getElementById("correo").value;
+  let servicio = document.getElementById("servicio").value;
+  let fecha = document.getElementById("fecha").value;
+  let mensaje = document.getElementById("mensaje").value;
+
+  let cuerpo = `
+🌸 RESERVA DE CITA 🌸
+
+👩 Nombre: ${nombre}
+
+📞 Teléfono: ${telefono}
+
+📧 Correo: ${correo}
+
+💅 Servicio: ${servicio}
+
+📅 Fecha: ${fecha}
+
+📝 Mensaje: ${mensaje}
+`;
+
+  let url = `https://mail.google.com/mail/?view=cm&fs=1&to=barreramonroykimberlygabriela@gmail.com&su=Reserva%20de%20Cita&body=${encodeURIComponent(cuerpo)}`;
+
+  window.open(url, "_blank");
+
+  document.querySelector("form").reset();
+
+}
+
+</script>
+
 
 
 <style>
